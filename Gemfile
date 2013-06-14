@@ -1,15 +1,17 @@
 source 'http://rubygems.org'
 
-gem 'rails', '~> 3.2.2'
+gem 'rails', '3.2.11'
 gem 'pg'
 
+gem 'heroku'
+
 # core function gems
-gem 'devise',              '~> 2.0.0'
-gem 'omniauth',            '~> 1.0.1'
-gem 'inherited_resources', '~> 1.3.0'
-gem 'simple_form',         '~> 2.0.0'
-gem 'nested_form',         '~> 0.2.0'
-gem 'squeel',              '~> 0.9.3'
+gem 'devise'
+gem 'omniauth'
+gem 'inherited_resources'
+gem 'simple_form'
+gem 'nested_form'
+gem 'squeel'
 gem 'rails_config'
 gem 'has_scope'
 gem 'kaminari'
@@ -19,7 +21,7 @@ gem 'carmen'
 gem 'geo_location'
 
 # asset gems
-gem 'slim', '~> 1.1.0'
+gem 'slim'
 gem 'slim-rails'
 gem 'modernizr-rails'
 gem 'jquery-rails'
@@ -28,8 +30,8 @@ gem 'carrierwave'
 gem 'client_side_validations', '~> 3.1.0'
 
 # asset compilation
-# gem 'execjs'
-# gem 'therubyracer'
+gem 'execjs'
+gem 'therubyracer'
 
 group :assets do
   gem 'sass-rails'
