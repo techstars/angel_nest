@@ -39,14 +39,15 @@ group :assets do
   gem 'uglifier'
 end
 
-group :development, :test do
-  gem 'capybara',           '~> 1.1.2'
-  gem 'rspec-rails',        '~> 2.8.1'
-  gem 'ffaker'
-  gem 'delorean'
-  gem 'database_cleaner'
-  gem 'launchy'
-end
+
+gem 'nokogiri'
+gem 'factory_girl_rails'
+gem 'capybara'
+gem 'rspec-rails'
+gem 'ffaker'
+gem 'delorean'
+gem 'database_cleaner'
+gem 'launchy'
 
 group :test do
   gem 'email_spec'
@@ -54,5 +55,3 @@ group :test do
   gem 'simplecov', :require => false
 end
 
-gem 'nokogiri'
-gem 'factory_girl_rails'
