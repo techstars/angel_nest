@@ -231,6 +231,7 @@ DEPENDENCIES
   mini_magick
   modernizr-rails
   nested_form (~> 0.2.0)
+  nokogiri
   omniauth (~> 1.0.1)
   pg
   rails (~> 3.2.2)
