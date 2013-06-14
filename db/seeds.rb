@@ -3,7 +3,7 @@ p 'Creating seeds data.'
 # primary user
 p ' > users ...'
 
-user = User.make!({
+user = User.create({
   :username => 'fredwu',
   :name     => 'Fred Wu',
   :email    => 'test@example.com',
@@ -12,14 +12,14 @@ user = User.make!({
 
 # more users
 
-40.times { User.make! }
+40.times { User.create }
 User.all.each { |u| u.confirm! }
 
 # investors and startups
 p ' > investors and startups ...'
 
-10.times { InvestorProfile.make! }
-20.times { Startup.make! }
+10.times { InvestorProfile.create }
+20.times { Startup.create }
 
 Startup.first.attach_user(user, :member, 'Founder')
 Startup.first.confirm_user(user)
@@ -28,7 +28,7 @@ InvestorProfile.all.each do |investor_profile|
   User.new_users.first.investor_profile = investor_profile
 end
 
-user.investor_profile = InvestorProfile.make!
+user.investor_profile = InvestorProfile.create
 
 # startup founders and proposals
 p ' > startup founders and proposals ...'
@@ -39,9 +39,9 @@ Startup.all.each do |startup|
   startup.confirm_user(u)
 
   if rand(2) == 0
-    startup.create_proposal(User.investors.sample, Proposal.make.attributes, 'draft')
+    startup.create_proposal(User.investors.sample, Proposal.create.attributes, 'draft')
   else
-    startup.create_proposal(user, Proposal.make.attributes, 'submitted')
+    startup.create_proposal(user, Proposal.create.attributes, 'submitted')
   end
 end
 
