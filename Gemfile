@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '~> 3.2.2'
-gem 'mysql2'
+gem 'pg'
 
 # core function gems
 gem 'devise',              '~> 2.0.0'
@@ -28,8 +28,8 @@ gem 'carrierwave'
 gem 'client_side_validations', '~> 3.1.0'
 
 # asset compilation
-gem 'execjs'
-gem 'therubyracer'
+# gem 'execjs'
+# gem 'therubyracer'
 
 group :assets do
   gem 'sass-rails'
