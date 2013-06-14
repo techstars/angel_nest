@@ -245,7 +245,7 @@ DEPENDENCIES
   devise
   email_spec
   execjs
-  factory_girl_rails (~> 1.7.0)
+  factory_girl_rails
   ffaker
   geo_location
   has_scope
