@@ -1,12 +1,4 @@
-require File.dirname(__FILE__) + '/../spec/support/blueprints'
-
-p 'Cleaning up temp data ...'
-
-FileUtils.rm_rf(File.join(Rails.root, 'public', 'uploads'))
-
-p 'Finished cleaning up temp data.'
-
-p 'Creating seeds data for development ...'
+p 'Creating seeds data.'
 
 # primary user
 p ' > users ...'
@@ -91,4 +83,4 @@ User.all.each do |u|
   u.sent_messages.order('RAND()').limit(3).each { |msg| msg.mark_as_archived! }
 end
 
-p 'Finished creating seeds data for development.'
+p 'Finished creating seeds data.'
